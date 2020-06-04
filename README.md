@@ -28,12 +28,18 @@ Run the jupyter server in the project's repository.
 
 `jupyter notebook --browser <your favourite browser>`
 
-Now run the **Shadow_Softmax.ipynb** and **Target_RandomForest.ipynb**.
-Observe the training and testing accuracy. There is a lot of difference between them, which means the *target model* is overfitting the data making it vulenrable to our attack.
+We are using two datasets for this project namely,
 
-Now run the attack with **Attack_Model.ipynb**. Here you will see the accuracy of the *Logistic Regression attack model* which is indication of the percentage of data we were able to classify as the member of the training set of our *target model*.
+- News20
+- Icon-50
 
-> Note: In case you encounter memory error. Run everything again after allocating more memory or run on another system
+Each dataset has a separate models file (**Models_icons_dataset.ipynb** and **Models_icons_dataset.ipynb**), which contain both *shadow model* and *target model*. To execute attack using any of the dataset first run the respective models file and after that run the **Common_Attack_Model.ipynb**.
+
+When running any dataset's model file, observe the training and testing accuracy. There is a lot of difference between them, which means the *target model* is overfitting the data making it vulenrable to our attack.
+
+Now run the attack with **Common_Attack_Model.ipynb**. Here you will see the accuracy of the *Logistic Regression attack model* which is indication of the percentage of data we were able to classify as the member of the training set of our *target model*.
+
+> Note: In case you encounter memory error. Run everything again after allocating more memory or run on another system. Ignore convergence errors also.
 
 **Test Train split visulisation**
 
